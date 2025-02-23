@@ -1,0 +1,57 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    padding: 20px 0;
+    z-index: 100;
+  }
+  
+  .nav-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    height: 80px; /* Increase height */
+    width: auto;  /* Maintain aspect ratio */
+  }
+  
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #a1ff8b; /* Light green effect */
+  }
+  
+  .contact-btn {
+    background: #d1ff50;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    transition: 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background: #b4e646;
+  }
+  
