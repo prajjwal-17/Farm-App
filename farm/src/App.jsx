@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
+import Products from "./Products"; // Import Products
 import "./App.css";
 
 const Home = () => (
@@ -16,22 +17,21 @@ const Home = () => (
   </div>
 );
 
-const About = () => <h1>About Page</h1>;
-const Blog = () => <h1>Blog Page</h1>;
-const Reviews = () => <h1>Reviews Page</h1>;
-const Products = () => <h1>Products Page</h1>;
-const Contact = () => <h1>Contact Page</h1>;
+const About = () => <h1 className="page-container">About Page</h1>;
+const Blog = () => <h1 className="page-container">Blog Page</h1>;
+const Visualization = () => <h1 className="page-container">Visualization</h1>;
+const Contact = () => <h1 className="page-container">Contact Page</h1>;
 
 function App() {
   return (
     <Router>
-      <div>
+      <div className="app-container">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/visualization" element={<Visualization />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

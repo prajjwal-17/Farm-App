@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background Styling */
+.bg-container,
+.page-container,
+.products-container {
+  background-image: url('/background.jpg'); /* Ensure correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Dark overlay effect */
+.bg-container::before,
+.page-container::before,
+.products-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Ensure content appears above overlay */
+.content,
+.page-container h1,
+.products-container .form-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Form Container */
+.form-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blur {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  border: 2px solid #d1ff50;
+  outline: none;
+  box-shadow: 0px 0px 8px rgba(209, 255, 80, 0.7);
+}
+
+/* Button Styling */
+button {
+  background: #d1ff50;
+  color: black;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background: #b4e646;
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* Prediction Result Styling */
+.prediction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Prediction Result */
+.prediction-result {
+  padding: 12px 16px;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgb(255 255 255 / 13%);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #0fff10;
+  text-align: center;
+  width: fit-content;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Show Animation */
+.prediction-result.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Icon */
+.prediction-result .icon {
+  color: green;
+  font-size: 20px;
+}
