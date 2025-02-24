@@ -15,9 +15,9 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/predictor">Price Predictor</Link></li>
           <li><Link to="/visualization">Visualization</Link></li>
-          <li><Link to="/products">Products</Link></li>
+          <li><Link to="/products">Crop Detector</Link></li>
         </ul>
 
         {/* Contact Button */}

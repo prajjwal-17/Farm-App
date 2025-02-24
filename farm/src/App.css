@@ -1,9 +1,11 @@
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Background Container */
 .bg-container,
 .page-container {
   background-image: url('/background.jpg'); /* Ensure correct path */
@@ -39,10 +41,15 @@
   z-index: 2;
 }
 
+/* Content Container */
 .content {
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Headings */
 .content h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -59,31 +66,43 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap; /* Ensures buttons wrap on small screens */
 }
 
-.learn-more {
-  background: #d1ff50;
+.learn-more,
+.contact-us {
   padding: 12px 24px;
   border-radius: 20px;
   font-weight: bold;
-  border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
+  outline: none; /* Removes default focus outline */
+}
+
+/* Learn More Button */
+.learn-more {
+  background: #d1ff50;
+  border: none;
 }
 
 .learn-more:hover {
   background: #b4e646;
 }
 
+/* Contact Us Button */
 .contact-us {
   background: transparent;
   border: 2px solid white;
   color: white;
-  padding: 12px 24px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .contact-us:hover {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Accessibility - Add Focus */
+.learn-more:focus,
+.contact-us:focus {
+  outline: 2px solid white;
+  outline-offset: 2px;
 }

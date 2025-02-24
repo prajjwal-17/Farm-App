@@ -2,13 +2,16 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import Products from "./Products"; // Import Products
+import Visualization from "./Visualization"; // Import Visualization
 import "./App.css";
+import PricePredictor from "./PricePredictor";
 
 const Home = () => (
   <div className="bg-container">
     <div className="content">
-      <h1>Organic food from the ground to your table</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <h1>Grow More, Worry Less with Our Farm Assistant</h1>
+      <p>Unlock the power of real-time insights for your farm’s success.
+      From weather alerts to disease detection — we help you thrive every season</p>
       <div className="buttons">
         <button className="learn-more">Learn More →</button>
         <button className="contact-us">Contact Us</button>
@@ -18,8 +21,6 @@ const Home = () => (
 );
 
 const About = () => <h1 className="page-container">About Page</h1>;
-const Blog = () => <h1 className="page-container">Blog Page</h1>;
-const Visualization = () => <h1 className="page-container">Visualization</h1>;
 const Contact = () => <h1 className="page-container">Contact Page</h1>;
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route path="/predictor" element={<PricePredictor />} />
           <Route path="/visualization" element={<Visualization />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
